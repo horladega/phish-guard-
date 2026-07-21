@@ -20,3 +20,4 @@ PhishGuard scans any message and flags:
 1. Install dependencies:
    ```bash
    pip install python-whois tldextract
+2. https://github.com/horladega/phish-guard-
