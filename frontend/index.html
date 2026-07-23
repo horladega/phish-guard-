@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard - Phishing Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ PhishGuard</h1>
+            <p>Advanced Phishing Detection Tool</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Input Section -->
+            <div class="section input-section">
+                <label for="messageInput" class="section-title">📧 Paste Email or Message Below:</label>
+                <textarea id="messageInput" placeholder="Paste suspicious email or WhatsApp message here..."></textarea>
+                <button id="scanBtn" class="scan-button">Scan for Phishing</button>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="loading-spinner hidden">
+                <div class="spinner"></div>
+                <p>Analyzing message...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div class="section results-section hidden" id="resultsSection">
+                <h2 class="section-title">📋 Scan Results</h2>
+                
+                <!-- Keywords Found -->
+                <div id="keywordsContainer" class="keywords-container hidden">
+                    <h3>⚠️ Suspicious Keywords Found:</h3>
+                    <div id="keywordsList" class="keywords-list"></div>
+                </div>
+
+                <!-- URLs Analysis -->
+                <div id="urlsContainer" class="urls-container hidden">
+                    <h3>🔗 URL Analysis:</h3>
+                    <div id="urlsList" class="urls-list"></div>
+                </div>
+
+                <!-- No Links Message -->
+                <div id="noLinksMessage" class="info-message hidden">
+                    ✓ No suspicious links found in message.
+                </div>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="error-message hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
